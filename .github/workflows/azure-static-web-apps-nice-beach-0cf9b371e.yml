@@ -16,7 +16,7 @@ jobs:
     name: Build and Deploy Job
     env: 
       VUE_APP_ORDER_SERVICE_URL: https://4.155.241.109:3000/orders
-      VUE_APP_PRODUCT_SERVICE_URL: https://productservice-efa4d0d6bgacc7hh.eastus2-01.azurewebsites.net
+      VUE_APP_PRODUCT_SERVICE_URL: https://productservice-efa4d0d6bgacc7hh.eastus2-01.azurewebsites.net/products
     steps:
       - uses: actions/checkout@v3
         with:
@@ -47,4 +47,5 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_BEACH_0CF9B371E }}
           action: "close"
+
 
